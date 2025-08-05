@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesthetic Planner with Multiple Reminders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/public/p.css">
+</head>
+<body>
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="home.html">
+      <button onclick="goBack()">&#60;</button>
+    </a>
+  </div>
+
+  <!-- Calendar -->
+  <div class="calendar-container">
+    <input type="date" id="datePicker" />
+  </div>
+
+  <div class="planner-container">
+    <h1 class="title">Daily Planner</h1>
+
+    <div class="planner-body">
+      <div class="section to-do">
+        <h2>To-do List</h2>
+        <textarea id="todoList" placeholder="• Add your tasks here..."></textarea>
+      </div>
+
+      <div class="section schedule">
+        <h2>Schedule</h2>
+        <textarea id="schedule" placeholder="Enter your schedule..."></textarea>
+      </div>
+
+      <div class="section priorities">
+        <h2>Priorities</h2>
+        <textarea id="priorities" placeholder="What matters most today?"></textarea>
+      </div>
+
+      <div class="section goals">
+        <h2>Goals</h2>
+        <textarea id="goals" placeholder="Set your goals..."></textarea>
+      </div>
+
+      <!-- Reminders Section -->
+      <div class="section reminders">
+        <h2>Reminders</h2>
+        <textarea id="reminderText" placeholder="Enter reminder details..."></textarea>
+        <label for="reminderTime">Set Reminder Time:</label>
+        <input type="datetime-local" id="reminderTime" />
+        <button id="addReminderButton">Add Reminder</button>
+
+        <!-- List of Reminders -->
+        <h3>Reminders List</h3>
+        <ul id="remindersList"></ul>
+      </div>
+    </div>
+
+    <!-- Save Button -->
+    <button id="saveButton">Save</button>
+  </div>
+
+  <!-- Previous Entries Section -->
+  <div class="previous-entries-container">
+    <h3>Previous Entries</h3>
+    <ul id="previousEntries"></ul>
+  </div>
+
+  <script src="/public/p.js"></script>
+</body>
+</html>

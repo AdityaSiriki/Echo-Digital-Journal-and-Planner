@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/j.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left side for Journal Entry -->
+        <div class="journal-section">
+            <h1>JOURNAL</h1>
+            <h3>Today's Entry</h3>
+            <textarea id="todayEntry" placeholder="Write your entry for today..."></textarea>
+            <button id="saveButton">Save Entry</button>
+        </div>
+
+        <div class="back-button">
+            <a href="home.html">
+                <button onclick="goBack()">&#60;</button>
+              </a>
+          </div>
+
+        <!-- Right side for Calendar and Previous Entries -->
+        <div class="calendar-section">
+            <div class="calendar">
+                <div class="month">
+                    <button id="prev" onclick="prevMonth()">&#10094;</button>
+                    <h2 id="month"></h2>
+                    <button id="next" onclick="nextMonth()">&#10095;</button>
+                </div>
+                <div class="weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
+            <div class="previous-entries">
+                <h3>Previous Entries</h3>
+                <ul id="previousEntries">
+                    <!-- Entries will be added dynamically here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="/public/j.js"></script>
+    <script src="/public/cal.js"></script>
+</body>
+</html>

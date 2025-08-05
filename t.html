@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobby Tracker</title>
+  <link rel="stylesheet" href="/public/t.css">
+</head>
+<body>
+
+ <!-- Back Button -->
+ <div class="back-button">
+    <a href="home.html">
+        <button onclick="goBack()">&#60;</button>
+      </a>
+  </div>
+  <div class="calendar-container">
+    <div class="selector">
+        <select id="monthSelect">
+            <option value="">Select Month</option>
+            <option value="0">January</option>
+            <option value="1">February</option>
+            <option value="2">March</option>
+            <option value="3">April</option>
+            <option value="4">May</option>
+            <option value="5">June</option>
+            <option value="6">July</option>
+            <option value="7">August</option>
+            <option value="8">September</option>
+            <option value="9">October</option>
+            <option value="10">November</option>
+            <option value="11">December</option>
+        </select>
+
+        <select id="yearSelect">
+            <option value="">Select Year</option>
+        </select>
+    </div>
+</div>
+  
+  <div class="container">
+    <header>
+      <h1>TRACKER</h1>
+    </header>
+
+    <div class="content">
+      <div class="sidebar">
+        <h2>Hobbies</h2>
+        <div class="hobby-list">
+          <input type="text" placeholder="Hobby 1">
+          <input type="text" placeholder="Hobby 2">
+          <input type="text" placeholder="Hobby 3">
+          <input type="text" placeholder="Hobby 4">
+          <input type="text" placeholder="Hobby 5">
+        </div>
+      </div>
+
+      <div class="tracker-grid">
+        <div class="grid">
+          <div class="grid-header">
+            <!-- Days 1-31 -->
+            <script>
+              for (let i = 1; i <= 31; i++) {
+                document.write(`<span>${i}</span>`);
+              }
+            </script>
+          </div>
+          <div class="grid-body">
+            <script>
+              // Generate 5x31 grid aligned with hobbies
+              for (let i = 0; i < 5; i++) {
+                document.write('<div class="grid-row">');
+                for (let j = 0; j < 31; j++) {
+                  document.write('<div class="grid-cell"></div>');
+                }
+                document.write('</div>');
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/public/t.js"></script>
+</body>
+</html>
